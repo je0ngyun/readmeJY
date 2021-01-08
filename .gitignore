@@ -160,4 +160,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#prettier
+.prettierrc
+
 # End of https://www.toptal.com/developers/gitignore/api/expressionengine,node,windows

@@ -21,3 +21,7 @@ body {
 .second-bg{
   background-color: var(--main-second-color) !important;
 }
+
+.main-bg{
+  background-color: var(--main-bg-color) !important;
+}
