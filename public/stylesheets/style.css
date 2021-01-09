@@ -33,3 +33,9 @@ body {
 .ml-item {
   margin-left: 40px;
 }
+
+@media (max-width: 1200px) {
+  .create-mt {
+    margin-top: 25px;
+  }
+}
