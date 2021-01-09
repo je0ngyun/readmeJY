@@ -18,10 +18,18 @@ body {
   border: 1px solid aquamarine;
 }
 
+.border-test2 {
+  border: 1px solid red;
+}
+
 .second-bg {
   background-color: var(--main-second-color) !important;
 }
 
 .main-bg {
   background-color: var(--main-bg-color) !important;
+}
+
+.ml-item {
+  margin-left: 40px;
 }
