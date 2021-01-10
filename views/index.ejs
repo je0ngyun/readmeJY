@@ -42,13 +42,13 @@
     <div class="container">
       <!-- title  -->
       <div class="row border-test mt-5 rounded">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
           photo image <br />
           photo image <br />
           photo image <br />
           photo image <br />
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
           introduction <br />
           introduction <br />
           introduction <br />
@@ -57,8 +57,20 @@
       </div>
 
       <!-- main menu  -->
-      <div class="row mt-2 rounded border-test">
-        <div class="col-12">메뉴</div>
+      <div class="row mt-4 rounded">
+        <div
+          id="intro_btn"
+          class="col-3 d-flex justify-content-center menu-btn bb"
+        >
+          소개
+        </div>
+        <div
+          id="product_btn"
+          class="col-3 d-flex justify-content-center menu-btn bb"
+        >
+          작품
+        </div>
+        <div class="col-6 bb"></div>
       </div>
 
       <div class="row"><% include ./intro_page %></div>
@@ -68,7 +80,7 @@
         <p>Tr0picalN / KimJeongYun</p>
       </footer>
     </div>
-    <script src="//unpkg.com/jquery@3/dist/jquery.min.js"></script>
+    <script src="/javascripts/btn_event.js"></script>
     <script src="//unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
     <script src="//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js"></script>
   </body>
