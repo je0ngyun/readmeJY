@@ -5,9 +5,10 @@
 }
 
 body {
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
   background-color: var(--main-bg-color) !important;
   color: black !important;
+  font-family: 'RIDIBatang' !important;
+  font-size: x-large !important;
 }
 
 .content-box {
@@ -38,4 +39,11 @@ body {
   .create-mt {
     margin-top: 25px;
   }
+}
+
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('../static/RIDIBatang.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
