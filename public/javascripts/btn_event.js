@@ -6,6 +6,9 @@ let product_btn;
 let active_page;
 let current_page;
 
+let bg_color = '#5120ff';
+let black_color = '000000';
+
 let fadeout = function (index) {
   console.log(active_page.item(index));
 };
@@ -15,13 +18,12 @@ let fadein = function (index) {
 };
 
 let btn_click_event = function (event) {
-  let obj = event.target;
-  if (obj == menu.item(0)) {
-    console.log('동일');
-    obj.style;
-  } else {
-    console.log('비동일');
+  for (let item of menu) {
+    item.style.removeProperty('color');
+    item.style.removeProperty('border-bottom');
   }
+  event.target.style.color = bg_color;
+  event.target.style.borderBottomColor = bg_color;
 };
 
 let init = function () {
