@@ -58,23 +58,13 @@
 
       <!-- main menu  -->
       <div class="row mt-4 rounded">
-        <div
-          id="intro_btn"
-          class="col-3 d-flex justify-content-center menu-btn bb"
-        >
-          소개
-        </div>
-        <div
-          id="product_btn"
-          class="col-3 d-flex justify-content-center menu-btn bb"
-        >
-          작품
-        </div>
+        <div class="col-3 d-flex justify-content-center menu-btn bb">소개</div>
+        <div class="col-3 d-flex justify-content-center menu-btn bb">작품</div>
         <div class="col-6 bb"></div>
       </div>
 
-      <div class="row"><% include ./intro_page %></div>
-      <div class="row"><% include ./product_page %></div>
+      <div class="row active_page"><% include ./intro_page %></div>
+      <div class="row active_page"><% include ./product_page %></div>
 
       <footer class="mt-3">
         <p>Tr0picalN / KimJeongYun</p>
