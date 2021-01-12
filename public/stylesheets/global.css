@@ -40,8 +40,6 @@ body {
 }
 
 .menu-btn:hover {
-  color: #5120ff;
-  border-bottom: 2px solid var(--main-border-color);
 }
 
 @media (max-width: 1200px) {
