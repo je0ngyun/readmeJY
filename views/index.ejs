@@ -58,19 +58,27 @@
 
       <!-- main menu  -->
       <div class="row mt-4 rounded">
-        <div class="col-3 d-flex justify-content-center menu-btn bb">소개</div>
-        <div class="col-3 d-flex justify-content-center menu-btn bb">작품</div>
-        <div class="col-6 bb"></div>
+        <div class="col-md-1 col-3 d-flex justify-content-center btn-grad">
+          소개
+        </div>
+        <div class="col-md-1 col-3 d-flex justify-content-center btn-grad">
+          작품
+        </div>
+        <div class="col-md-10 col-6"></div>
       </div>
 
-      <div class="row active_page"><% include ./intro_page %></div>
-      <div class="row active_page"><% include ./product_page %></div>
+      <div class="row active_page" style="display: block">
+        <% include ./intro_page %>
+      </div>
+      <div id="circle2" class="row active_page" style="display: block">
+        <% include ./product_page %>
+      </div>
 
       <footer class="mt-3">
         <p>Tr0picalN / KimJeongYun</p>
       </footer>
     </div>
-    <script src="/javascripts/btn_event.js"></script>
+    <script src="/javascripts/main.js"></script>
     <script src="//unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
     <script src="//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js"></script>
   </body>
