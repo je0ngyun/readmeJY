@@ -17,8 +17,8 @@
     <div class="row">
       <div class="col">
         <nav
-          class="navbar navbar-expand-lg navbar-light bg-light navbar-rounded shadow"
-          style="z-index: 100"
+          class="navbar navbar-expand-lg navbar-dark navbar-rounded second-bg shadow btn-grad"
+          style="font-size: large"
         >
           <a class="navbar-brand" href="/"><%= title %></a>
         </nav>
@@ -41,7 +41,7 @@
 
     <div class="container">
       <!-- title  -->
-      <div class="row border-test mt-5 rounded">
+      <div class="row border-test mt-5 rounded shadow">
         <div class="col-12 col-md-6 d-flex justify-content-center">
           photo image <br />
           photo image <br />
@@ -58,19 +58,23 @@
 
       <!-- main menu  -->
       <div class="row mt-4 rounded">
-        <div class="col-md-1 col-3 d-flex justify-content-center btn-grad">
+        <div
+          class="col-xl-1 col-sm-2 col-3 d-flex justify-content-center btn-grad shadow"
+        >
           소개
         </div>
-        <div class="col-md-1 col-3 d-flex justify-content-center btn-grad">
+        <div
+          class="col-xl-1 col-sm-2 col-3 d-flex justify-content-center btn-grad shadow"
+        >
           작품
         </div>
-        <div class="col-md-10 col-6"></div>
+        <div class="col-xl-10 col-sm-8 col-6"></div>
       </div>
 
-      <div class="row active_page" style="display: block">
+      <div class="row active_page shadow" style="display: block">
         <% include ./intro_page %>
       </div>
-      <div id="circle2" class="row active_page" style="display: block">
+      <div id="circle2" class="row active_page shadow" style="display: block">
         <% include ./product_page %>
       </div>
 

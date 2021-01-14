@@ -1,12 +1,14 @@
 :root {
-  --main-bg-color: white;
-  --main-border-color: #5120ff;
-  --main-second-color: #f7f9fc;
+  --main-bg-color: #1b1f2e;
+  --main-border-color: #22273a;
+  --main-card-bg-color: #22273a;
+  --main-text-color: #b8bcd5;
+  --main-highlight-color: #344cb4;
 }
 
 body {
   background-color: var(--main-bg-color) !important;
-  color: black !important;
+  color: var(--main-text-color) !important;
   font-family: 'RIDIBatang' !important;
   font-size: x-large !important;
 }
@@ -17,10 +19,14 @@ body {
 
 .border-test {
   border: 1px solid var(--main-border-color);
+  background-color: var(--main-card-bg-color);
 }
 
 .second-bg {
-  background-color: var(--main-second-color) !important;
+  background-color: var(--main-card-bg-color) !important;
+}
+
+.
 }
 
 .bt {
@@ -42,9 +48,9 @@ body {
 .btn-grad {
   background-image: linear-gradient(
     to right,
-    #4b6cb7 0%,
-    #182848 51%,
-    #4b6cb7 100%
+    var(--main-card-bg-color) 0%,
+    var(--main-highlight-color) 51%,
+    var(--main-card-bg-color) 100%
   );
 }
 .btn-grad {
@@ -55,8 +61,7 @@ body {
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
+  color: var(--main-text-color);
   border-radius: 10px;
   display: block;
 }
