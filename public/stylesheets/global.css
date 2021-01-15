@@ -53,12 +53,23 @@ body {
 .btn-grad {
   background-image: linear-gradient(
     to right,
+    var(--main-highlight-color) 100%,
+    var(--main-highlight-color) 100%,
+    var(--main-highlight-color) 100%
+  );
+}
+
+.nav-grad {
+  background-image: linear-gradient(
+    to right,
     var(--main-card-bg-color) 0%,
     var(--main-highlight-color) 51%,
     var(--main-card-bg-color) 100%
   );
 }
-.btn-grad {
+
+.btn-grad,
+.nav-grad {
   font-size: medium;
   margin: 10px;
   padding: 5px 45px;
@@ -75,6 +86,17 @@ body {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+
+.nav-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.product:hover {
+  background-color: var(--main-highlight-color);
+  transition: all 0.5s ease-in-out;
 }
 
 @media (max-width: 1200px) {

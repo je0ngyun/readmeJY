@@ -23,8 +23,8 @@ let init = function () {
   current_page = active_page.item(0);
   menu = document.getElementsByClassName('btn-grad');
   //index 0 is nav bar
-  intro_btn = menu.item(1);
-  product_btn = menu.item(2);
+  intro_btn = menu.item(0);
+  product_btn = menu.item(1);
 
   _eventhandler(intro_btn);
   _eventhandler(product_btn);
