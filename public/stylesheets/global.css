@@ -26,7 +26,12 @@ body {
   background-color: var(--main-card-bg-color) !important;
 }
 
-.
+.text-highlight {
+  color: var(--main-highlight-color);
+}
+
+.text-highlight:hover {
+  color: var(--main-text-color);
 }
 
 .bt {
@@ -45,10 +50,6 @@ body {
   margin-left: 40px;
 }
 
-.product {
-  background-color: var(--main-highlight-color);
-}
-
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -57,7 +58,6 @@ body {
     var(--main-card-bg-color) 100%
   );
 }
-
 .btn-grad {
   font-size: medium;
   margin: 10px;
@@ -78,7 +78,13 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .create-mt {
+  .create-mt-xl {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 770px) {
+  .create-mt-md {
     margin-top: 25px;
   }
 }
