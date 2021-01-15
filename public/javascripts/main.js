@@ -41,22 +41,20 @@ let fade_ani = function (event) {
   let op;
   let timer;
 
-  if (element != current_page) {
+  if (element.style.display === 'block') {
     op = 1;
     timer = setInterval(fadeOut, 20);
-    setTimeout(function () {
-      current_page = element;
-      op = 0.1;
-      timer = setInterval(fadeIn, 20);
-    }, 550);
+  } else {
+    op = 0.1;
+    timer = setInterval(fadeIn, 20);
   }
 
   function fadeOut() {
     if (op <= 0.1) {
       clearInterval(timer);
-      current_page.style.display = 'none';
+      element.style.display = 'none';
     }
-    current_page.style.opacity = op;
+    element.style.opacity = op;
     op -= op * 0.1;
   }
 

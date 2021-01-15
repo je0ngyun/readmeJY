@@ -50,6 +50,10 @@ body {
   margin-left: 40px;
 }
 
+.product {
+  background-color: var(--main-highlight-color);
+}
+
 .btn-grad {
   background-image: linear-gradient(
     to right,
@@ -58,6 +62,7 @@ body {
     var(--main-card-bg-color) 100%
   );
 }
+
 .btn-grad {
   font-size: medium;
   margin: 10px;
