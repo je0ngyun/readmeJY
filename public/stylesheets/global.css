@@ -62,8 +62,11 @@ body {
 .nav-grad {
   background-image: linear-gradient(
     to right,
-    var(--main-card-bg-color) 0%,
+    var(--main-highlight-color) 0%,
+    var(--main-highlight-color) 21%,
+    var(--main-highlight-color) 31%,
     var(--main-highlight-color) 51%,
+    var(--main-card-bg-color) 71%,
     var(--main-card-bg-color) 100%
   );
 }
@@ -96,7 +99,7 @@ body {
 
 .product:hover {
   background-color: var(--main-highlight-color);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 1200px) {

@@ -1,73 +1,98 @@
-'use strict';
+var App = function () {
+  var args = Array.prototype.slice.call(arguments),
+    callback = args.pop(),
+    modules = args[0] && typeof args[0] === 'string' ? args : args[0],
+    i;
 
-let menu;
-let intro_btn;
-let product_btn;
-let clicked;
-let active_page;
-let current_page;
+  if (!(this instanceof App)) {
+    return new App(modules, callback);
+  }
 
-let bg_color = '#5120ff';
-let black_color = '000000';
+  if (!modules || modules === '*' || modules[0] === '*') {
+    modules = [];
+    for (i in App.modules) {
+      if (App.modules.hasOwnProperty(i)) {
+        modules.push(i);
+      }
+    }
+  }
 
-let fadeout = function (box) {};
+  for (i = 0; i < modules.length; i++) {
+    App.modules[modules[i]](this);
+  }
 
-let fadein = function (box) {};
-
-let _eventhandler = function (btn) {
-  btn.addEventListener('click', fade_ani);
+  if (callback !== undefined && typeof callback == 'function') {
+    callback(this);
+  }
 };
+App.prototype = {
+  getName: function () {
+    return this.name;
+  },
+  getApp: function () {
+    console.log(this);
+  },
+};
+App.modules = {};
+App.modules.main = function (value) {};
 
-let init = function () {
-  active_page = document.getElementsByClassName('active_page');
-  current_page = active_page.item(0);
+App('main', init);
+function init(value) {
+  let menu;
+  let introBtn;
+  let productBtn;
+  let activePage;
+  let currentPage;
+
+  let _eventhandler = function (btn) {
+    btn.addEventListener('click', fadeAni);
+  };
+
+  activePage = document.getElementsByClassName('active-page');
+  currentPage = activePage.item(0);
   menu = document.getElementsByClassName('btn-grad');
-  //index 0 is nav bar
-  intro_btn = menu.item(0);
-  product_btn = menu.item(1);
+  introBtn = menu.item(0);
+  productBtn = menu.item(1);
+  _eventhandler(introBtn);
+  _eventhandler(productBtn);
 
-  _eventhandler(intro_btn);
-  _eventhandler(product_btn);
-};
-
-let fade_ani = function (event) {
-  let index;
-  if (event.target == intro_btn) {
-    index = 0;
-  } else {
-    index = 1;
-  }
-  let element = active_page.item(index);
-  let op;
-  let timer;
-
-  if (element != current_page) {
-    op = 1;
-    timer = setInterval(fadeOut, 20);
-    setTimeout(function () {
-      current_page = element;
-      op = 0.1;
-      timer = setInterval(fadeIn, 20);
-    }, 550);
-  }
-
-  function fadeOut() {
-    if (op <= 0.1) {
-      clearInterval(timer);
-      current_page.style.display = 'none';
+  function fadeAni(event) {
+    let index;
+    if (event.target == introBtn) {
+      index = 0;
+    } else {
+      index = 1;
     }
-    current_page.style.opacity = op;
-    op -= op * 0.1;
-  }
+    let element = activePage.item(index);
+    let op;
+    let timer;
 
-  function fadeIn() {
-    element.style.display = 'block';
-    if (op >= 0.95) {
-      clearInterval(timer);
+    if (element != currentPage) {
+      op = 1;
+      timer = setInterval(fadeOut, 15);
+      setTimeout(function () {
+        currentPage = element;
+        op = 0.1;
+        timer = setInterval(fadeIn, 15);
+      }, 550);
     }
-    element.style.opacity = op;
-    op += op * 0.1;
-  }
-};
 
-window.onload = init;
+    function fadeOut() {
+      if (op <= 0.1) {
+        clearInterval(timer);
+        currentPage.style.display = 'none';
+      }
+      currentPage.style.opacity = op;
+      op -= op * 0.1;
+    }
+
+    function fadeIn() {
+      element.style.display = 'block';
+      if (op >= 0.95) {
+        clearInterval(timer);
+      }
+      element.style.opacity = op;
+      op += op * 0.1;
+    }
+  }
+}
