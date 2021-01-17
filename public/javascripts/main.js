@@ -1,62 +1,17 @@
-var App = function () {
-  var args = Array.prototype.slice.call(arguments),
-    callback = args.pop(),
-    modules = args[0] && typeof args[0] === 'string' ? args : args[0],
-    i;
+var App = window.App || {}; // App이 없다면 {} 로 초기화 > 하나의 전역 객체 선언
 
-  if (!(this instanceof App)) {
-    return new App(modules, callback);
-  }
-
-  if (!modules || modules === '*' || modules[0] === '*') {
-    modules = [];
-    for (i in App.modules) {
-      if (App.modules.hasOwnProperty(i)) {
-        modules.push(i);
-      }
-    }
-  }
-
-  for (i = 0; i < modules.length; i++) {
-    App.modules[modules[i]](this);
-  }
-
-  if (callback !== undefined && typeof callback == 'function') {
-    callback(this);
-  }
-};
-App.prototype = {
-  getName: function () {
-    return this.name;
-  },
-  getApp: function () {
-    console.log(this);
-  },
-};
-App.modules = {};
-App.modules.main = function (value) {};
-
-App('main', init);
-function init(value) {
+App.main = (function () {
   let menu;
   let introBtn;
   let productBtn;
   let activePage;
   let currentPage;
 
-  let _eventhandler = function (btn) {
-    btn.addEventListener('click', fadeAni);
+  let _eventhandler = function (obj, event, callback) {
+    obj.addEventListener(event, callback);
   };
 
-  activePage = document.getElementsByClassName('active-page');
-  currentPage = activePage.item(0);
-  menu = document.getElementsByClassName('btn-grad');
-  introBtn = menu.item(0);
-  productBtn = menu.item(1);
-  _eventhandler(introBtn);
-  _eventhandler(productBtn);
-
-  function fadeAni(event) {
+  let _fadeAni = function (event) {
     let index;
     if (event.target == introBtn) {
       index = 0;
@@ -94,5 +49,28 @@ function init(value) {
       element.style.opacity = op;
       op += op * 0.1;
     }
-  }
-}
+  };
+
+  return {
+    init: function () {
+      activePage = document.getElementsByClassName('active-page');
+      currentPage = activePage.item(0);
+      menu = document.getElementsByClassName('btn-grad');
+      introBtn = menu.item(0);
+      productBtn = menu.item(1);
+      _eventhandler(introBtn, 'click', _fadeAni);
+      _eventhandler(productBtn, 'click', _fadeAni);
+    },
+    addEvent: function (obj, event, callback) {
+      _eventhandler(obj, event, callback);
+    },
+  };
+})();
+
+window.addEventListener(
+  'load',
+  function () {
+    App.main.init();
+  },
+  false,
+);
