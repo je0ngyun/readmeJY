@@ -6,29 +6,21 @@ App.select = (function () {
   let activePage;
   let currentPage;
 
-  let _getIndx = function (item) {
-    let indexArr = Array.from(menu);
-    for (let index in indexArr) {
-      if (menu.item(index) === item.currentTarget) {
-        return index;
-      }
-    }
-  };
-
   let _fadeAni = function (event) {
-    let index = _getIndx(event);
+    App.main.pauseRock(menu, 'click', _fadeAni);
+    let index = App.main.getItemIndex(event, menu);
     let element = activePage.item(index);
     let op;
     let timer;
 
     if (element != currentPage) {
       op = 1;
-      timer = setInterval(fadeOut, 15);
+      timer = setInterval(fadeOut, 17);
       setTimeout(function () {
         currentPage = element;
         op = 0.1;
-        timer = setInterval(fadeIn, 15);
-      }, 550);
+        timer = setInterval(fadeIn, 17);
+      }, 500);
     }
 
     function fadeOut() {
