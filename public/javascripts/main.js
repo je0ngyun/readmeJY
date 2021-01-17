@@ -12,6 +12,10 @@ App.main = (function () {
     let op;
     let timer;
 
+    //자연스러운 페이지 연결위함//
+    let wrapper = document.querySelector('.wrapper');
+    wrapper.style.height = currentPage.clientHeight + 100 + 'px';
+
     if (element != currentPage) {
       op = 1;
       timer = setInterval(fadeOut, 17);
@@ -69,15 +73,6 @@ App.main = (function () {
       let indexArr = Array.from(list);
       for (let index in indexArr) {
         if (list.item(index) === item.currentTarget) {
-          return index;
-        }
-      }
-    },
-    getIndex: function (item, list) {
-      let indexArr = Array.from(list);
-      for (let index in indexArr) {
-        if (menu.item(index) === item.currentTarget) {
-          console.log('success');
           return index;
         }
       }

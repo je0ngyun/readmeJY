@@ -71,12 +71,13 @@
         </div>
         <div class="col-xl-8 col-sm-8 col-6"></div>
       </div>
-
-      <div class="row active-page shadow" style="display: block">
-        <% include ./intro_page %>
-      </div>
-      <div class="row active-page shadow" style="display: none">
-        <% include ./product_page %>
+      <div class="wrapper">
+        <div class="row active-page shadow target" style="display: block">
+          <% include ./intro_page %>
+        </div>
+        <div class="row active-page shadow target" style="display: none">
+          <% include ./product_page %>
+        </div>
       </div>
     </div>
     <script src="/javascripts/main.js"></script>

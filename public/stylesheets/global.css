@@ -30,6 +30,9 @@ body {
   background-color: var(--main-card-bg-color);
 }
 
+.wrapper {
+}
+
 .second-bg {
   background-color: var(--main-card-bg-color) !important;
 }
