@@ -1,4 +1,4 @@
-var App = window.App || {}; // App이 없다면 {} 로 초기화 > 하나의 전역 객체 선언
+var App = window.App || {};
 
 App.main = (function () {
   let menu;
@@ -52,7 +52,7 @@ App.main = (function () {
   };
 
   return {
-    init: function () {
+    run: function () {
       activePage = document.getElementsByClassName('active-page');
       currentPage = activePage.item(0);
       menu = document.getElementsByClassName('btn-grad');
@@ -70,7 +70,7 @@ App.main = (function () {
 window.addEventListener(
   'load',
   function () {
-    App.main.init();
+    App.main.run();
   },
   false,
 );
