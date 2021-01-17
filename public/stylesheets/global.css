@@ -13,6 +13,14 @@ body {
   font-size: x-large !important;
 }
 
+.photo {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
 .content-box {
   border: 5x solid var(--main-border-color);
 }
