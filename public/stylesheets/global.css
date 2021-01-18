@@ -70,20 +70,7 @@ body {
   );
 }
 
-.nav-grad {
-  background-image: linear-gradient(
-    to right,
-    var(--main-highlight-color) 0%,
-    var(--main-highlight-color) 21%,
-    var(--main-highlight-color) 31%,
-    var(--main-highlight-color) 51%,
-    var(--main-card-bg-color) 71%,
-    var(--main-card-bg-color) 100%
-  );
-}
-
-.btn-grad,
-.nav-grad {
+.btn-grad {
   font-size: medium;
   margin: 10px;
   padding: 5px 45px;

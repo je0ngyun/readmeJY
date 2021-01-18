@@ -14,7 +14,7 @@ App.main = (function () {
 
     //자연스러운 페이지 연결위함//
     let wrapper = document.querySelector('.wrapper');
-    wrapper.style.height = currentPage.clientHeight + 100 + 'px';
+    wrapper.style.height = element.clientHeight + 100 + 'px';
 
     if (element != currentPage) {
       op = 1;
