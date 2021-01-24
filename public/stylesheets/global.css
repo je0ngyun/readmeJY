@@ -118,8 +118,6 @@ body {
 @font-face {
   font-family: 'RIDIBatang';
   src: url('../static/RIDIBatang.otf') format('woff');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -143,30 +141,15 @@ body {
   }
 }
 
-.text {
-  position: absolute;
-  width: 450px;
-  left: 50%;
-  margin-left: -300px;
-  height: 40px;
-  top: 50%;
-  margin-top: -20px;
-}
-
 .word {
-  position: absolute;
   width: 220px;
   opacity: 0;
-}
-
-.test {
-  position: absolute;
-  width: 220px;
-  opacity: 0;
+  height: 100%;
+  font-weight: bold;
 }
 
 .letter {
-  display: inline-block;
+  display: inline;
   position: relative;
   float: left;
   transform: translateZ(25px);
@@ -187,10 +170,6 @@ body {
   transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.wisteria {
-  color: #8e44ad;
-}
-
 .belize {
   color: #2980b9;
 }
@@ -201,8 +180,4 @@ body {
 
 .green {
   color: #16a085;
-}
-
-.midnight {
-  color: #b1317b;
 }

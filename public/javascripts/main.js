@@ -71,6 +71,7 @@ App.main = (function () {
     }
 
     currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+    targeting(currentWord);
   }
 
   function animateLetterOut(cw, i) {
@@ -100,8 +101,21 @@ App.main = (function () {
     wordArray.push(letters);
   }
 
+  function targeting(index) {
+    let pre = index - 1;
+    if (pre < 0) pre = 2;
+
+    let words = document.querySelectorAll('.word');
+    for (word of words) {
+      word.style.display = 'none';
+    }
+
+    words.item(index).style.opacity = 1;
+    words.item(index).style.display = 'inline';
+  }
+
   changeWord();
-  setInterval(changeWord, 4000);
+  setInterval(changeWord, 3000);
 
   return {
     run: function () {
