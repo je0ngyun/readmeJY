@@ -13,6 +13,10 @@ body {
   font-size: x-large !important;
 }
 
+.wrapper {
+  height: 1000px;
+}
+
 .photo {
   width: 60%;
   height: 100%;
@@ -54,6 +58,10 @@ body {
 
 .bb {
   border-bottom: 2px solid gray;
+}
+
+.bb-highlight {
+  border-bottom: 2px solid var(--main-bg-color);
 }
 
 .main-bg {
@@ -112,6 +120,16 @@ body {
 @media (max-width: 770px) {
   .create-mt-md {
     margin-top: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .word {
+    width: 220px;
+    opacity: 0;
+    height: 100%;
+    font-weight: bold;
+    margin-top: 12px;
   }
 }
 

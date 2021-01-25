@@ -12,10 +12,6 @@ App.main = (function () {
     let op;
     let timer;
 
-    //자연스러운 페이지 연결위함//
-    let wrapper = document.querySelector('.wrapper');
-    wrapper.style.height = element.clientHeight + 100 + 'px';
-
     if (element != currentPage) {
       op = 1;
       timer = setInterval(fadeOut, 17);
@@ -45,12 +41,12 @@ App.main = (function () {
     }
   };
 
-  var words = document.getElementsByClassName('word');
-  var wordArray = [];
-  var currentWord = 0;
+  let words = document.getElementsByClassName('word');
+  let wordArray = [];
+  let currentWord = 0;
 
   words[currentWord].style.opacity = 1;
-  for (var i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     splitLetters(words[i]);
   }
 
@@ -60,11 +56,11 @@ App.main = (function () {
       currentWord == words.length - 1
         ? wordArray[0]
         : wordArray[currentWord + 1];
-    for (var i = 0; i < cw.length; i++) {
+    for (let i = 0; i < cw.length; i++) {
       animateLetterOut(cw, i);
     }
 
-    for (var i = 0; i < nw.length; i++) {
+    for (let i = 0; i < nw.length; i++) {
       nw[i].className = 'letter behind';
       nw[0].parentElement.style.opacity = 1;
       animateLetterIn(nw, i);
@@ -87,11 +83,11 @@ App.main = (function () {
   }
 
   function splitLetters(word) {
-    var content = word.innerHTML;
+    let content = word.innerHTML;
     word.innerHTML = '';
-    var letters = [];
-    for (var i = 0; i < content.length; i++) {
-      var letter = document.createElement('span');
+    let letters = [];
+    for (let i = 0; i < content.length; i++) {
+      let letter = document.createElement('span');
       letter.className = 'letter';
       letter.innerHTML = content.charAt(i);
       word.appendChild(letter);
@@ -113,9 +109,23 @@ App.main = (function () {
     words.item(index).style.opacity = 1;
     words.item(index).style.display = 'inline';
   }
-
   changeWord();
   setInterval(changeWord, 3000);
+
+  function scrollAutoTestFnc() {
+    let scrollHeight = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight,
+    );
+    let scrollTop = Math.max(
+      document.documentElement.scrollTop,
+      document.body.scrollTop,
+    );
+    let clientHeight = document.documentElement.clientHeight;
+    if (scrollHeight - (scrollTop + clientHeight) < 100) {
+      console.log(scrollHeight - (scrollTop + clientHeight));
+    }
+  }
 
   return {
     run: function () {
@@ -125,6 +135,7 @@ App.main = (function () {
       for (let item of menu) {
         App.main.addEvent(item, 'click', _fadeAni);
       }
+      App.main.addEvent(document, 'scroll', scrollAutoTestFnc);
     },
     addEvent: function (obj, event, callback) {
       obj.addEventListener(event, callback);
