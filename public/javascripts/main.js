@@ -124,6 +124,7 @@ App.main = (function () {
     let clientHeight = document.documentElement.clientHeight;
     if (scrollHeight - (scrollTop + clientHeight) < 100) {
       console.log(scrollHeight - (scrollTop + clientHeight));
+      //function 추가필요
     }
   }
 

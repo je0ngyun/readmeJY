@@ -17,6 +17,10 @@ body {
   height: 1000px;
 }
 
+.bottom-offset {
+  height: 30px;
+}
+
 .photo {
   width: 60%;
   height: 100%;
