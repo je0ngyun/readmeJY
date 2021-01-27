@@ -123,8 +123,10 @@ App.main = (function () {
     );
     let clientHeight = document.documentElement.clientHeight;
     if (scrollHeight - (scrollTop + clientHeight) < 100) {
-      console.log(scrollHeight - (scrollTop + clientHeight));
-      //function 추가필요
+      document.querySelector('.float').classList.add('fl-in');
+    }
+    if (scrollHeight - (scrollTop + clientHeight) > 100) {
+      document.querySelector('.float').classList.remove('fl-in');
     }
   }
 
