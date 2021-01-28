@@ -14,10 +14,9 @@
   bottom: 40px;
   right: 40px;
   background-color: #0c9;
-  color: #fff;
+  color: var(--main-bg-color);
   border-radius: 50px;
   text-align: center;
-  box-shadow: 2px 2px 3px #999;
 }
 
 .fl-in {
