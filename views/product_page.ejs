@@ -22,7 +22,7 @@
       <div class="row mt-3">
         <div
           class="col-12 col-xl-8 border-test rounded mb-3 shadow"
-          style="font-size: large"
+          style="font-size: medium"
         >
           <div class="row bb mb-1 mt-1 p-1">
             <div class="col-12">header</div>
@@ -51,12 +51,23 @@
           </div>
         </div>
         <div
-          class="col-12 mb-3 offset-xl-1 col-xl-3 create-mt-xl border-test rounded shadow d-flex justify-content-center"
+          class="mb-3 offset-xl-1 col-xl-3 mt-md-0 mt-3 border-test rounded shadow d-xl-flex d-none justify-content-center"
         >
-          <span class="align-self-center project-img">1</span>
-          <span class="align-self-center project-img">2 </span>
-          <span class="align-self-center project-img">3 </span>
-          <span class="align-self-center project-img">4</span>
+          <span style="display: block" class="align-self-center project-img"
+            >평시</span
+          >
+          <span style="display: none" class="align-self-center project-img"
+            >1</span
+          >
+          <span style="display: none" class="align-self-center project-img"
+            >2
+          </span>
+          <span style="display: none" class="align-self-center project-img"
+            >3
+          </span>
+          <span style="display: none" class="align-self-center project-img"
+            >4</span
+          >
         </div>
       </div>
 
@@ -73,6 +84,7 @@
         <% include ./product_4 %>
       </div>
     </div>
+    <script src="/javascripts/showImg.js"></script>
     <script src="/javascripts/select.js"></script>
     <script src="//unpkg.com/jquery@3/dist/jquery.min.js"></script>
     <script src="//unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
