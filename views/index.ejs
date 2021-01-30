@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <link rel="stylesheet" href="/stylesheets/global.css" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= title %></title>
-    <link
-      rel="stylesheet"
-      href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-    />
+    <% include ./header %>
   </head>
 
   <body>
@@ -25,11 +9,10 @@
     <div class="row">
       <div class="col">
         <nav
-          class="navbar navbar-expand navbar-dark navbar-rounded second-bg shadow"
-          style="font-size: large"
+          class="navbar navbar-expand navbar-dark navbar-rounded assistant-bg shadow"
         >
           <a href="/">
-            <img class="title-img ml-1 mr-4" src="/images/title.png" />
+            <img class="title-img ml-2 mr-3" src="/images/title.png" />
           </a>
           <a class="navbar-brand" href="/"><%= title %></a>
         </nav>
@@ -42,17 +25,17 @@
         <div
           class="col-12 col-md-6 p-3 pr-md-5 d-flex justify-content-center justify-content-md-end"
         >
-          <img class="photo shadow scale-up-center" src="/images/face.jpg" />
+          <img class="photo scale-up-center shadow" src="/images/face.jpg" />
         </div>
         <div
-          class="row col-12 col-md-6 d-flex p-3 pl-md-5 justify-content-center justify-content-md-start align-self-center create-mt-md"
+          class="row col-12 col-md-6 d-flex p-3 pl-md-5 justify-content-center justify-content-md-start align-self-center"
         >
           <div class="row col-12">The Sky is the limit</div>
           <div class="row col-12 mt-5">
             <span>안녕하세요!&nbsp;&nbsp;</span>
             <span class="word belize">백엔드지향</span>
             <span class="word pomegranate">희열넘치는</span>
-            <span class="word green">노력하는</span>
+            <span class="word green">열정을가진</span>
           </div>
           <div class="row col-12 mt-2">개발자 김정윤 입니다.</div>
         </div>
@@ -75,10 +58,10 @@
         <div class="col-xl-8 col-sm-8 col-6"></div>
       </div>
       <div class="wrapper">
-        <div class="row active-page shadow target mb-5" style="display: block">
+        <div class="row mb-5 shadow active-page target" style="display: block">
           <% include ./intro_page %>
         </div>
-        <div class="row active-page shadow target mb-5" style="display: none">
+        <div class="row mb-5 shadow active-page target" style="display: none">
           <% include ./product_page %>
         </div>
       </div>

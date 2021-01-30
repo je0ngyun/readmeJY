@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <link rel="stylesheet" href="/stylesheets/global.css" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= title %></title>
-    <link
-      rel="stylesheet"
-      href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css"
-    />
+    <% include ./header %>
   </head>
 
   <body>
@@ -21,13 +9,13 @@
       <!-- product  -->
       <div class="row mt-3">
         <div
-          class="col-12 col-xl-8 border-test rounded mb-3 shadow"
+          class="col-12 col-xl-8 rounded shadow content mb-3"
           style="font-size: medium"
         >
           <div class="row bb mb-1 mt-1 p-1">
             <div class="col-12">header</div>
           </div>
-          <div class="row bb-highlight product mt-1 p-1 tt">
+          <div class="row bb-highlight product mt-1 p-1">
             <div class="col-12 col-sm-4">AutoAction</div>
             <div class="col-sm-8 d-none d-sm-block">
               JAVA + javaSwing 매크로 프로그램
@@ -51,7 +39,7 @@
           </div>
         </div>
         <div
-          class="mb-3 offset-xl-1 col-xl-3 mt-md-0 mt-3 border-test rounded shadow d-xl-flex d-none justify-content-center"
+          class="mb-3 offset-xl-1 col-xl-3 mt-md-0 mt-3 content rounded shadow d-xl-flex d-none justify-content-center"
         >
           <span style="display: block" class="align-self-center project-img"
             >평시</span
@@ -70,20 +58,21 @@
           >
         </div>
       </div>
-
-      <div class="row page" style="display: block">
-        <% include ./product_1 %>
-      </div>
-      <div class="row page" style="display: none">
-        <% include ./product_2 %>
-      </div>
-      <div class="row page" style="display: none">
-        <% include ./product_3 %>
-      </div>
-      <div class="row page" style="display: none">
-        <% include ./product_4 %>
-      </div>
     </div>
+
+    <div class="col-12 p-4 content rounded shadow page" style="display: block">
+      1
+    </div>
+    <div class="col-12 p-4 content rounded shadow page" style="display: none">
+      2
+    </div>
+    <div class="col-12 p-4 content rounded shadow page" style="display: none">
+      3
+    </div>
+    <div class="col-12 p-4 content rounded shadow page" style="display: none">
+      4
+    </div>
+
     <script src="/javascripts/showImg.js"></script>
     <script src="/javascripts/select.js"></script>
     <script src="//unpkg.com/jquery@3/dist/jquery.min.js"></script>
