@@ -1,7 +1,7 @@
 'use strict';
 var App = window.App || {};
 
-App.select = (function () {
+App.pageToggle = (function () {
   let menu;
   let activePage;
   let currentPage;
@@ -41,11 +41,10 @@ App.select = (function () {
       op += op * 0.1;
     }
   };
-
   return {
     run: function () {
-      menu = document.querySelectorAll('.product');
-      activePage = document.querySelectorAll('.page');
+      menu = document.querySelectorAll('.btn-grad');
+      activePage = document.querySelectorAll('.active-page');
       currentPage = activePage.item(0);
       for (let item of menu) {
         App.main.addEvent(item, 'click', _fadeAni);
@@ -53,10 +52,3 @@ App.select = (function () {
     },
   };
 })();
-window.addEventListener(
-  'load',
-  function () {
-    App.select.run();
-  },
-  false,
-);

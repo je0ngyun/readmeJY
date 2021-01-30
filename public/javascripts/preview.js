@@ -1,7 +1,7 @@
 'use strict';
 var App = window.App || {};
 
-App.showImg = (function () {
+App.preview = (function () {
   let menu;
   let img;
 
@@ -35,11 +35,3 @@ App.showImg = (function () {
     },
   };
 })();
-
-window.addEventListener(
-  'load',
-  function () {
-    App.showImg.run();
-  },
-  false,
-);
