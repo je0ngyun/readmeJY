@@ -6,52 +6,7 @@
   --main-highlight-color: #344cb4;
 }
 
-.project-img {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.float {
-  visibility: hidden;
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 40px;
-  right: 40px;
-  background-color: #0c9;
-  color: var(--main-bg-color);
-  border-radius: 50px;
-  text-align: center;
-}
-
-.fl-in {
-  animation: float-in 0.5s ease-in-out;
-  visibility: visible;
-}
-
-@keyframes float-in {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-
-  to {
-    opacity: 3;
-    transform: none;
-  }
-}
+/*글로벌*/
 
 body {
   background-color: var(--main-bg-color) !important;
@@ -64,20 +19,6 @@ body {
 .wrapper {
   height: 1000px;
   background-color: var(--main-bg-color);
-}
-
-.photo {
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
-}
-
-.scale-up-center {
-  -webkit-animation: scale-up-center 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55)
-    both;
-  animation: scale-up-center 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 }
 
 .content {
@@ -155,19 +96,77 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 400px) {
-  .word {
-    width: 220px;
+/*글로벌 end*/
+
+/*프로젝트 미리보기 이미지*/
+
+.project-img {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
     opacity: 0;
-    height: 100%;
-    font-weight: bold;
-    margin-top: 12px;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-@font-face {
-  font-family: 'RIDIBatang';
-  src: url('../static/RIDIBatang.otf') format('woff');
+/*프로젝트 미리보기 이미지 end*/
+
+/*스크롤 하단 위로가기버튼*/
+
+.float {
+  visibility: hidden;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0c9;
+  color: var(--main-bg-color);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.fl-in {
+  animation: float-in 0.5s ease-in-out;
+  visibility: visible;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 3;
+    transform: none;
+  }
+}
+
+/*스크롤 하단 위로가기버튼 end*/
+
+/*프로필 사진*/
+
+.photo {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    both;
+  animation: scale-up-center 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -190,6 +189,25 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+/*프로필 사진 end*/
+
+/*글자 애니메이션*/
+
+@media (max-width: 400px) {
+  .word {
+    width: 220px;
+    opacity: 0;
+    height: 100%;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+}
+
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('../static/RIDIBatang.otf') format('woff');
 }
 
 .word {
@@ -232,3 +250,5 @@ body {
 .green {
   color: #16a085;
 }
+
+/*글자 에니메이션 end*/
