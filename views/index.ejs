@@ -46,7 +46,7 @@
       </div>
 
       <!-- main menu  -->
-      <div class="row mt-4 rounded">
+      <div class="row mt-4 rounded mb-4">
         <div
           class="col-xl-2 col-sm-2 col-3 d-flex justify-content-center btn-grad shadow"
         >
@@ -62,8 +62,11 @@
         <div class="col-xl-8 col-sm-8 col-6"></div>
       </div>
       <div class="wrapper">
-        <div class="row mb-5 shadow active-page target" style="display: block">
-          <% include ./intro_page %>
+        <div
+          class="row mb-5 shadow active-page target p-5"
+          style="display: block; background: #22273a"
+        >
+          <div id="introduce" class="markdown-body"></div>
         </div>
         <div class="row mb-5 shadow active-page target" style="display: none">
           <% include ./product_page %>
@@ -74,11 +77,13 @@
       <i class="fas fa-arrow-up fa-lg mt-3"></i>
     </a>
 
+    <script src="/javascripts/markdown.js"></script>
     <script src="/javascripts/letterAni.js"></script>
     <script src="/javascripts/main.js"></script>
     <script src="/javascripts/scroll.js"></script>
     <script src="/javascripts/pageToggle.js"></script>
     <script src="//unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
     <script src="//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </body>
 </html>

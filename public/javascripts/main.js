@@ -2,7 +2,6 @@ var App = window.App || {};
 
 App.main = (function () {
   return {
-    run: function () {},
     addEvent: function (obj, event, callback) {
       obj.addEventListener(event, callback);
     },
@@ -38,6 +37,7 @@ window.addEventListener(
     App.scroll.run();
     App.preview.run();
     App.letterAni.run();
+    App.markdown.run();
   },
   false,
 );
