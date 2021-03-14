@@ -297,3 +297,9 @@ body {
 }
 
 /*타이틀 글자 end*/
+
+.previewbox {
+  position: fixed;
+  display: none;
+  z-index: 999;
+}

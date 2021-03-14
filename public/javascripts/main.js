@@ -38,6 +38,7 @@ window.addEventListener(
     App.preview.run();
     App.letterAni.run();
     App.markdown.run();
+    App.previewImg.run();
   },
   false,
 );
