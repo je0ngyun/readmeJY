@@ -98,27 +98,6 @@ body {
 
 /*글로벌 end*/
 
-/*프로젝트 미리보기 이미지*/
-
-.project-img {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*프로젝트 미리보기 이미지 end*/
-
 /*스크롤 하단 위로가기버튼*/
 
 .float {
@@ -307,6 +286,21 @@ body {
   position: fixed;
   display: none;
   z-index: 999;
+  border: 3px solid var(--main-highlight-color);
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.4s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*프로젝트 이미지 미리보기 end*/
