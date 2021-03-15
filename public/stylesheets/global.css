@@ -298,8 +298,15 @@ body {
 
 /*타이틀 글자 end*/
 
+/*프로젝트 이미지 미리보기*/
+
 .previewbox {
+  width: 150px;
+  height: 150px;
+  background-color: var(--main-card-bg-color);
   position: fixed;
   display: none;
   z-index: 999;
 }
+
+/*프로젝트 이미지 미리보기 end*/
