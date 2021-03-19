@@ -291,7 +291,7 @@ body {
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 0.4s;
+  animation-duration: 0.7s;
 }
 
 @keyframes fadeInOpacity {
@@ -304,3 +304,67 @@ body {
 }
 
 /*프로젝트 이미지 미리보기 end*/
+
+/*스킬 바*/
+
+.skill {
+  position: relative;
+  width: 500%;
+}
+
+.skill__type {
+  color: #fff;
+  font-weight: 100;
+  font-size: 5px;
+}
+
+.skill__outer-bar,
+.skill__inner-bar {
+  height: 5px;
+}
+
+.skill__outer-bar {
+  background: #333;
+  width: 40%;
+}
+
+.skill__inner-bar {
+  animation: fillBar 1s forwards;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+
+.skill__inner-bar--100 {
+  width: 100%;
+  background: #f8a518;
+}
+.skill__inner-bar--90 {
+  width: 90%;
+  background: #18a6f8;
+}
+.skill__inner-bar--80 {
+  width: 80%;
+  background: #f8dd18;
+}
+.skill__inner-bar--70 {
+  width: 70%;
+  background: #8718f8;
+}
+.skill__inner-bar--60 {
+  width: 60%;
+  background: #f818b5;
+}
+
+@keyframes fillBar {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.t22 {
+  background-color: yellow;
+}
+
+.t33 {
+  background-color: white;
+}
