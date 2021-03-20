@@ -96,6 +96,10 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.product {
+  background-color: var(--main-card-bg-color);
+}
+
 /*글로벌 end*/
 
 /*스크롤 하단 위로가기버튼*/
